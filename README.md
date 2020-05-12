@@ -2,7 +2,7 @@ See a minimal working example at http://stanford.edu/~bwaldon/cgi-bin/afs_exp/in
 
 # How it works
 
-A PHP script (`collectdata.php`) collects a participant's data and saves their results as a .txt file on your web server. Participants are also provided a participation code which is identical to the name of their results file (it's also written to `participant_codes.txt`). To claim compensation, participants enter their participation code on, e.g., MTurk or Prolific Academic. 
+A PHP script (`collectdata.php`) collects a participant's data and saves their results as a .txt file on your web server. Participants are also provided a participation code which is identical to the name of their results file (this code is also written to `participant_codes.txt`). To claim compensation, participants enter their participation code on, e.g., MTurk or Prolific Academic. 
 
 # Instructions
 
