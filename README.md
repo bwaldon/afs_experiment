@@ -2,7 +2,7 @@ See a minimal working example at http://stanford.edu/~bwaldon/cgi-bin/afs_exp/in
 
 # How it works
 
-A PHP script (`collectdata.php`) collects a participant's data and saves their results as a .txt file on your web server. Participants are also provided a participation code which is identical to the name of their results file (this code is also written to `participant_codes.txt`). To claim compensation, participants enter their participation code on, e.g., MTurk or Prolific Academic. 
+A PHP script (`collectdata.php`) collects a participant's data and saves their results as a .txt file on your web server. Participants are also provided a participation code which is identical to the name of their results file (this code is also written to `participant_codes.txt`). To claim compensation, participants enter their participation code on Prolific Academic (or email their code to the researcher - however you decide to set up recruitment). 
 
 # Instructions
 
@@ -28,9 +28,7 @@ Make sure to change this back to `if (false) {` before going on to step 3.
 
 Upload your experiment folder to the appropriate place provided by your web hosting service. For Stanford AFS users, this is the `cgi-bin` directory (PHP won't work elsewhere on AFS). 
 
-## Step 4: Link your experiment URL from MTurk, Prolific, etc.
-
-Last I checked, MTurk has an 'external survey' template with a place for workers to enter a participation code. 
+## Step 4: Link your experiment URL from Prolific, etc.
 
 # Todo
 
