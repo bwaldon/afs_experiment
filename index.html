@@ -1,0 +1,128 @@
+<html>
+
+<head>
+    <title>Speaker Perception</title>
+
+    <!--JS-->
+
+    <!-- external general utilities -->
+    <script src="_shared/js/jquery-1.11.1.min.js "></script>
+    <script src="_shared/full-projects/jquery-ui/jquery-ui.min.js"></script>
+    <script src="_shared/js/underscore-min.js"></script>
+    <!-- if you want to draw stuff: -->
+    <!-- <script src="_shared/js/raphael-min.js"></script> -->
+
+    <!-- cocolab experiment logic -->
+    <script src="_shared/js/exp-V2.js"></script>
+    <script src="_shared/js/stream-V2.js"></script>
+
+    <!-- cocolab general utilities -->
+    <script src="_shared/js/mmturkey.js "></script>
+    <script src="_shared/js/browserCheck.js"></script>
+    <script src="_shared/js/utils.js"></script>
+    <!-- if you want to draw cute creatures (depends on raphael): -->
+    <!-- <script src="_shared/js/ecosystem.js"></script> -->
+
+    <!-- experiment specific helper functions -->
+    <!-- <script src="js/local-utils.js"></script> -->
+
+    <!--CSS-->
+    <link href="_shared/full-projects/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+    <link href="_shared/css/cocolab-style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/local-style.css" rel="stylesheet" type="text/css"/>
+
+    <!-- experiment file -->
+    <script src="js/stimuli.js"></script>
+    <script src="js/index.js"></script>
+
+
+</head>
+
+<body onload="init();">
+  <noscript>This task requires JavaScript.</noscript>
+
+  <div class="slide" id="i0" >
+    <br>
+    <p id="instruct-text">Template for AFS-Hosted Experiments
+
+    <p>Please make sure you have headphones. Please also make sure your volume is turned up.</p> 
+    <button id="start_button" type="button">Start Experiment</button>
+
+  </div>
+
+
+  <div class="slide" id="trial">
+    <br>
+
+    <div id="perception"> 
+      <!-- <p id="speakerutt">{{}}</p>
+      <p id="exchange">{{}}</p> -->
+      <p>
+      <div id="audio_container">
+      <audio controls id="audio_player"> 
+      <!--    <source src="" id="audio_src_ogg" type="audio/ogg"> -->
+          <source src="" id="audio_src_wav" type="audio/wav"> 
+        Your browser does not support the audio element. 
+        </audio>
+      </div> 
+
+    <p>
+
+    <table id="slider_table" class="slider_table">
+      <tr><td class="left"><h3>no accent at all</h3></td><td colspan="2"><div id="accent_slider" class="slider"></div></td><td class="right" id="numObjects"><h3>heavy accent</h3></td></tr>
+      <tr></tr>
+      <tr><td class="left"><h3>easy to understand</h3></td><td colspan="2"><div id="understand_slider" class="slider"></div></td><td class="right" id="numObjects"><h3>difficult to understand</h3></td></tr>
+      <tr></tr>
+    </table>
+
+
+    <p><button id="done_percept" onclick="_s.button_percept()">Continue</button></p>
+    <p id="error_percept">Please adjust both sliders before continuing.</p>
+  </div>
+</div>
+
+  
+  <div class="slide"  id="subj_info">
+    <br>
+    <div class="long_form">
+      <div class="subj_info_title">Additional information</div>
+      <p class="info">Answering these questions is optional, but will help us understand your answers.</p>
+      <p>How many languages do you speak?</p>
+      <label><input type="radio"  name="languages" value=1/>One</label>
+      <label><input type="radio"  name="languages" value=2/>Two</label>
+      <label><input type="radio"  name="languages" value=3/>Three</label>
+      <label><input type="radio"  name="languages" value=4/>Four</label>
+      <label><input type="radio"  name="languages" value=5/>Five or more</label>
+
+      <p>Is English your first language?</p>
+      <label><input type="radio"  name="english" value="yes"/>Yes</label>
+      <label><input type="radio"  name="english" value="no"/>No</label>
+
+      <p>Did you read the instructions?</p>
+      <label><input type="radio"  name="assess" value="no"/>No</label>
+      <label><input type="radio"  name="assess" value="yes"/>Yes</label>
+      <label><input type="radio"  name="assess" value="confused"/>I was confused</label>
+
+      <p>We would be interested in any comments you have about this experiment. Please type them here:</p>
+      <textarea id="comments" rows="3" cols="50"></textarea>
+      <br/>
+      <button onclick="_s.submit()">Submit</button>
+    </div>
+  </div>
+
+  <div id="thanks" class="slide js" >
+    <p  class="big">Thanks for your time!</p>
+    Please do not close this window...
+  </div>
+  
+  <div class="progress">
+    <span>Progress:</span>
+    <div class="bar-wrapper">
+      <div class="bar" width="0%">
+      </div>
+    </div>
+    </body>
+  </div>
+
+
+</html>
