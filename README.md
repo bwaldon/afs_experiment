@@ -31,3 +31,9 @@ Upload your experiment folder to the appropriate place provided by your web host
 ## Step 4: Link your experiment URL from MTurk, Prolific, etc.
 
 Last I checked, MTurk has an 'external survey' template with a place for workers to enter a participation code. 
+
+# Todo
+
+- If a participant is redirected to collectdata.php and refreshes, a blank results file is created and the participant gets a new code. Ideally, the first code is somehow saved locally (as a cookie?) and we block the creation of blank results files. 
+
+- A less awkward way to preview data collection locally. 
