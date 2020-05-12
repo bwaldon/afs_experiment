@@ -14,7 +14,7 @@ Should you choose to use AFS, you'll also need to enable the Stanford Common Gat
 
 ## Step 2: Design your experiment offline. 
 
-Hint: a nice feature about the 245B experiment templates is that you can preview the data that would be saved if your experiment were live. By default, you script won't do this - after a particpant completes the study, they're redirected to `collectdata.php` (note that PHP won't work on a local machine - you'll probably just see raw code in your browser). If you want to preview your results and not redirect to the PHP script, open up `_shared/js/mmturkey.js` and change line 116...
+Hint: a nice feature about the 245B experiment templates is that you can preview the data that would be saved if your experiment were live. By default, your script won't do this - after a particpant completes the study, they're redirected to `collectdata.php` (note that PHP won't work on a local machine - you'll probably just see raw code in your browser). If you want to preview your results and not redirect to the PHP script, open up `_shared/js/mmturkey.js` and change line 116...
 
 `if (false) {`
 
