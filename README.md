@@ -1,4 +1,4 @@
-See a minimal working example at http://stanford.edu/~bwaldon/cgi-bin/afs_exp/index.html
+See a minimal working example at http://stanford.edu/~bwaldon/cgi-bin/afs_experiment/index.html
 
 # How it works
 
@@ -31,7 +31,5 @@ Upload your experiment folder to the appropriate place provided by your web host
 ## Step 4: Link your experiment URL from Prolific, etc.
 
 # Todo
-
-- If a participant is redirected to collectdata.php and refreshes, a blank results file is created and the participant gets a new code. Ideally, the first code is somehow saved locally (as a cookie?) and we block the creation of blank results files. 
 
 - A less awkward way to preview data collection locally. 
