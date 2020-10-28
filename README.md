@@ -2,7 +2,7 @@ See a minimal working example at http://stanford.edu/~bwaldon/cgi-bin/afs_experi
 
 # How it works
 
-A PHP script (`collectdata.php`) collects a participant's data and saves their results as a .txt file on your web server. Participants are also provided a participation code which is identical to the name of their results file (this code is also written to `participant_codes.txt`). To claim compensation, participants enter their participation code on Prolific Academic (or email their code to the researcher - however you decide to set up recruitment). 
+A PHP script (`collectdata.php`) collects a participant's data and saves their results as a .json file on your web server. Participants enter some sort of identifying information (e.g. a school ID, an email address, or a Prolific username), so you can keep track of them for compensation purposes. 
 
 # Instructions
 
