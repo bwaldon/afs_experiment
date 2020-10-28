@@ -99,17 +99,22 @@ function make_slides(f) {
 
   slides.subj_info =  slide({
     name : "subj_info",
-    submit : function(e){
+    button_submit : function(e){
       //if (e.preventDefault) e.preventDefault(); // I don't know what this means.
-      exp.subj_data = {
+      if ($('input[name="participant_id"]').val().length == 0) {
+        $("#error_emptyid").show();
+      } else {
+        exp.participant_id = $('input[name="participant_id"]').val();
+        exp.subj_data = {
         submittime_utc : Date.now(),
         languages : $('input[name="languages"]:checked').val(),
         english : $('input[name="english"]:checked').val(),
         school : $('input[name="school"]:checked').val(),
         assess : $('input[name="assess"]:checked').val(),
-        comments : $("#comments").val(),
-      };
-      exp.go(); //use exp.go() if and only if there is no "present" data.
+        comments : $("#comments").val()
+        };
+        exp.go();
+      }
     }
   });
 
@@ -122,7 +127,8 @@ function make_slides(f) {
           "condition" : exp.condition,
           "hit_information" : exp.hit_data,
           "subject_information" : exp.subj_data,
-          "time_in_minutes" : (Date.now() - exp.startT)/60000
+          "time_in_minutes" : (Date.now() - exp.startT)/60000,
+          "participant_id" : exp.participant_id
       };
       setTimeout(function() {turk.submit(exp.data);}, 1000);
     }

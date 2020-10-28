@@ -86,7 +86,13 @@
     <br>
     <div class="long_form">
       <div class="subj_info_title">Additional information</div>
-      <p class="info">Answering these questions is optional, but will help us understand your answers.</p>
+      <!-- <p class="info">Please provide your Stanford ID below:</p> -->
+      <label for="participant_id">Please provide your Stanford ID below:</label> <br>
+      <input type="text" id="participant_id" name="participant_id">
+      <p hidden id="error_emptyid">You must provide your ID before continuing.</p>
+
+      <p><b>Answering the rest of these questions is optional but will help us understand your answers in the study.</b></p>
+
       <p>How many languages do you speak?</p>
       <label><input type="radio"  name="languages" value=1/>One</label>
       <label><input type="radio"  name="languages" value=2/>Two</label>
@@ -106,7 +112,7 @@
       <p>We would be interested in any comments you have about this experiment. Please type them here:</p>
       <textarea id="comments" rows="3" cols="50"></textarea>
       <br/>
-      <button onclick="_s.submit()">Submit</button>
+      <button onclick="_s.button_submit()">Submit</button>
     </div>
   </div>
 
