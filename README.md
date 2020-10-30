@@ -2,7 +2,7 @@ See a minimal working example at http://stanford.edu/~bwaldon/cgi-bin/afs_experi
 
 # How it works
 
-A PHP script (`collectdata.php`) collects a participant's data and saves their results as a .json file on your web server. Participants enter some sort of identifying information (e.g. a school ID, an email address, or a Prolific username), so you can keep track of them for compensation purposes. 
+A PHP script (`collectdata.php`) collects a participant's data and saves their results as a .json file on your web server. Participants enter some sort of identifying information (e.g. a school ID, an email address), so you can keep track of them for compensation purposes. 
 
 # Instructions
 
@@ -28,7 +28,13 @@ Make sure to change this back to `if (false) {` before going on to step 3.
 
 Upload your experiment folder to the appropriate place provided by your web hosting service. For Stanford AFS users, this is the `cgi-bin` directory (PHP won't work elsewhere on AFS). 
 
-## Step 4: Link your experiment URL from Prolific, etc.
+## Step 4: Distribute your experiment URL.
+
+## Step 5: Condense your individual response files into one file (outputs full_results.json)
+
+```
+node results/convertdata.js 
+```
 
 # Todo
 
