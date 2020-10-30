@@ -2,7 +2,7 @@ See a minimal working example at http://stanford.edu/~bwaldon/cgi-bin/afs_experi
 
 # How it works
 
-A PHP script (`collectdata.php`) collects a participant's data and saves their results as a .json file on your web server. Participants enter some sort of identifying information (e.g. a school ID, an email address), so you can keep track of them for compensation purposes. 
+A PHP script (`collectdata.php`) collects a participant's data and saves their results as a .json file on your web server. Participants enter some sort of identifying information (e.g. a name or a school ID), so you can keep track of them for compensation purposes. Note that this means you'll have to ensure that read permissions of your `results` folder are restricted to just yourself and system admins. 
 
 # Instructions
 
